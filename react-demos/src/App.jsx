@@ -1,4 +1,8 @@
 import { useState } from "react"
+import Counter from "./components/Counter";
+import TodoList from "./components/TodoList";
+import CopyInput from "./components/CopyInput";
+import PopupContent from "./components/popUpContent";
 
 // const Button = ()=>{
 //   const handleClick = () => console.log("You touched me")
@@ -17,19 +21,17 @@ import { useState } from "react"
 //   )
 // }
 
-const App=()=>{
 
-  const [count ,setCount] = useState(0);
+const App = () => {
+  const [copied, setCopied] = useState(false);
 
-  const increment  = () => setCount(count+1);
-  const decrement  = () => setCount(count-1);
-
-  return (<div>
-    <h1>{count}</h1>
-    <button onClick = {increment}>+</button>
-    <button onClick = {decrement}>- </button>
+  return (
+    <div>
+      {/* <TodoList /> */}
+      <CopyInput setCopied={setCopied} />
+      <PopupContent copied={copied} />
     </div>
-  )
-}
+  );
+};
 
 export default App;
