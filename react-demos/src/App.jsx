@@ -3,6 +3,7 @@ import Counter from "./components/Counter";
 import TodoList from "./components/TodoList";
 import CopyInput from "./components/CopyInput";
 import PopupContent from "./components/popUpContent";
+import Switcher from "./components/Switcher";
 
 // const Button = ()=>{
 //   const handleClick = () => console.log("You touched me")
@@ -28,8 +29,9 @@ const App = () => {
   return (
     <div>
       {/* <TodoList /> */}
-      <CopyInput setCopied={setCopied} />
-      <PopupContent copied={copied} />
+      {/* <CopyInput setCopied={setCopied} />
+      // <PopupContent copied={copied} /> */}
+      <Switcher />
     </div>
   );
 };
