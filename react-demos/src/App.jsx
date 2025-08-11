@@ -4,6 +4,9 @@ import TodoList from "./components/TodoList";
 import CopyInput from "./components/CopyInput";
 import PopupContent from "./components/popUpContent";
 import Switcher from "./components/Switcher";
+import BasicEffect from "./components/BasicEffect";
+import CounterEffect from "./CounterEffect";
+import FetchDataEffect from "./FetchDataEffect";
 
 // const Button = ()=>{
 //   const handleClick = () => console.log("You touched me")
@@ -28,10 +31,10 @@ const App = () => {
 
   return (
     <div>
-      {/* <TodoList /> */}
-      {/* <CopyInput setCopied={setCopied} />
-      // <PopupContent copied={copied} /> */}
-      <Switcher />
+      {/* <Switcher/>
+      <BasicEffect /> */}
+      {/* <CounterEffect /> */}
+      <FetchDataEffect />
     </div>
   );
 };
