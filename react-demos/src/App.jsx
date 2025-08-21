@@ -7,32 +7,16 @@ import Switcher from "./components/Switcher";
 import BasicEffect from "./components/BasicEffect";
 import CounterEffect from "./CounterEffect";
 import FetchDataEffect from "./FetchDataEffect";
+import uniqueId from "./components/uniqueId";
 
-
+import useFetch from "./components/useFetch";
 
 
 const App = () => {
 
-  const [data , setData] = useState(null);
-
-
-  useEffect(()=>{
-    fetch('https://jsonplaceholder.typicode.com/todos')
-    .then((res)=>res.json())
-    .then((data)=>setData(data));
-    
-  },[])
-
-
-
   return (
     <div>
-      {
-        data && data.map ((item)=>{
-          return<p key={item.id}>{item.title}</p>
-        })
-      }
-  
+   <uniqueId/>
     </div>
   );
 };
